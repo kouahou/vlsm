@@ -75,6 +75,7 @@ class AppView(tk.Frame):
     def render_submit(self):
         result_view = self.submit_view.controller.result
         graph_view = self.submit_view.controller.graph
+        tree_view = self.submit_view.controller.tree
         self.submit_view.destroy()
         self.submit_view = SubmitView(self)
         self.submit_view.grid(padx=20, ipadx=5, pady=20)
@@ -82,6 +83,7 @@ class AppView(tk.Frame):
         self.submit_view.set_controller(submit_controller)
         self.submit_view.controller.set_result_view(result_view)
         self.submit_view.controller.set_graph_view(graph_view)
+        self.submit_view.controller.set_tree_view(tree_view)
 
     def change_nb(self, event):
         self.render_content(int(self.change.entry_text.get()))

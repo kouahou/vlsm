@@ -1,0 +1,8 @@
+// Sub network
+digraph Subnet {
+	B [label=599]
+	C [label=190]
+	A [label=34]
+	B -> C
+	C -> A
+}
